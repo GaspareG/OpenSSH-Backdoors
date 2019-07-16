@@ -1,0 +1,68 @@
+\documentclass[11pt,svgnames,smaller]{beamer}
+
+\usepackage{CommandsAndStyle}
+
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage{xcolor}
+\usepackage{textpos}
+\usepackage{transparent}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{latexsym}
+\usepackage{graphicx} % [demo] is just for the example
+\usepackage{wrapfig}
+\usepackage{array, makecell} %
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
+
+\mode<presentation>
+
+\author{Gaspare Ferraro}
+
+\author[Gaspare Ferraro]{\includegraphics[height=2cm]{images/cherubino}\\Gaspare Ferraro\\ \vspace{10pt} \small{ICT Risk Assessment}}
+\institute[University Pisa]{University of Pisa\\Master Degree in Computer Science}
+
+\setbeamertemplate{section page}
+{
+	\begin{centering}
+		\begin{beamercolorbox}[sep=16pt,center]{part title}
+			\usebeamerfont{section title}\insertsection\par
+		\end{beamercolorbox}
+	\end{centering}
+}
+
+\title{The Dark Side of the ForSSHe}
+\date{Pisa, \today}
+\titlegraphic{\vfill}
+
+\setbeamercolor{title}{fg=black!65!black}
+
+
+\begin{document}
+	
+	\begin{frame} 
+	\titlepage
+	\end{frame}
+				
+	\logo{\transparent{0.2}\includegraphics[height=2cm]{images/cherubino}}
+
+	\include{./chapter1}
+	\include{./chapter2}
+	\include{./chapter3}
+	
+	\section{Fine}
+	\begin{frame}
+		\frametitle{References}
+		\centering
+		\Large
+		
+ 	\end{frame}
+  
+
+\end{document}
