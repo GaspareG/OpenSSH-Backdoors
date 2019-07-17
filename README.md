@@ -1,9 +1,41 @@
 # OpenSSH-Backdoors
 A landscape of OpenSSH backdoors - Seminar for ICT Risk Assessment exam @ UniPi
 
-##
-
 **Presentation**: [presentation.pdf](presentation.pdf)
+
+## Index
+
+1. **Introduction**
+   * SSH
+   * OpenSSH Suite
+   * The attackers
+   * Operation Windigo
+2. **Common features of OpenSSH backdoors**
+   * Strings and code obfuscation
+   * Credential stealing
+   * Exfiltration methods
+   * Backdoor mode
+3. **Backdoors families**
+   * OpenSSH backdoor galaxy
+   * Chandrila
+   * Bonadan
+   * Kessel
+   * Kamino
+4. **Honeypot**
+   * Definition and goals
+   * Honeypot structure and strategy
+   * Observed interaction: Mimban
+   * Observed interaction: Borleias
+5. **Compromission**
+   * Linux server market share
+   * Operation Windigo summary
+   * Operation Windigo damage
+6. **Mitigation**
+   * Preventing compromise of SSH servers
+   * Correct OpenSSH configuration
+   * Check logs
+   * Analyze network traffic
+   * Detect compromised SSH tools
 
 ## References
 
