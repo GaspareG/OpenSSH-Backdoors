@@ -5,18 +5,95 @@
 	\partpage
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Strings and code obfuscation}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Credential stealing}
+	
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Exfiltration methods}
-\end{frame}
+	
+	Once credentials are stealed, attackers need to exfiltrate them:
+	
+	\bigskip
 
+	\textbf{Exfiltration by local file}
+	
+	\smallskip
+	
+	Easy method: credentials are stored inside a file in the server,
+	
+	hidden in filesystem (e.g.: \textsc{.so} in \textsc{/usr/bin} or \textsc{.h} in \textsc{/usr/local/include}).
+	
+	Problem: attackers needs to have a way back into the system.
+	
+	\bigskip
+
+	\textbf{Exfiltration by C\&C server}
+	
+	\smallskip
+	
+	Complex method: send credentials over the network instead of local file.
+	
+	Problem: network communications are logged.
+	
+	Some backdoor encrypt communication with a symmetric key.
+	
+	\bigskip
+
+	\textbf{Exfiltration by email}
+
+	\smallskip
+	
+	In some rare cases credentials are sent by email.
+	
+	Problem: hardcode email address in the binary.
+	
+	\bigskip
+	
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Backdoor mode}
+	
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+	Permanent Method to connect back to the compromised machine, 
+	
+	\medskip
+
+	with the following features:
+	
+	\begin{itemize}
+	  \item \textbf{Hardcoded password}, 
+	  \item \textbf{Configuration and log}, TODO
+	  \item \textbf{Environment variables}, TODO
+	  \item \textbf{Hooked functions}, TODO
+	\end{itemize}
+  \end{column}
+  \begin{column}{0.5\textwidth}  %%<--- here
+      \begin{center}
+      
+       \includegraphics[width=0.5\textwidth]{images/hardcoded_password}
+       \captionof{figure}{Backdoor password verification}
+       \end{center}
+  \end{column}
+  \end{columns}
+
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
