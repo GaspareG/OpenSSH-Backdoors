@@ -5,28 +5,82 @@
 	\partpage
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{OpenSSH backdoor galaxy}
 	
    \begin{center}    
-   \includegraphics[width=0.5\textwidth]{images/OpenSSH_backdoor_galaxy}
-   \captionof{figure}{Backdoor password verification}
+   \includegraphics[width=0.6\textwidth]{images/OpenSSH_backdoor_galaxy}
+   %\captionof{figure}{Backdoor password verification}
    \end{center}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Chandrila}
-\end{frame}
+	
+	Save authentication method, username and password base64-encoded.
+	
+	\bigskip
+	
+	Exfiltration of credentials via local file or sent via UDP to a C\&C server.
+	
+	\bigskip
+	
+	Distinctive feature: \textbf{can receive commands through the SSH password}.\\
+	Two password are hardcoded in the backdoor: one to login in the server and another to execute commands, by appending data to the password.
+	
+	\bigskip
 
+  Powerful backdoor mode as attacker can execute command without a shell.
+  
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Bonadan}
-\end{frame}
+	
+	Backdoor fork a new thread inside the main function: this thread periodically calls two functions and pause for five minutes.
+	
+	\bigskip
+	
+	First function check if there is any \textbf{cryptocurrency miner} installed on the system and removes it.
+	
+	\bigskip
+	
+  Second function connect to the C\&C server and send several informations about the host over UDP (such as current username, OS version, external IP address, CPU and RAM models, speed of the miner).
+  
+	\bigskip
+	
+	Backdoor receive an answer from the C\&C server that can containing a specific command like: create a shell, execute a command on machine, updates the configuration, launch a cryptocurrency mining module.
+	
+	\bigskip
+	
+  The backdoor mines the \textbf{Monero cryptocurrency} as part of a mining pool.
 
+	\bigskip
+	
+  Problem: need to store wallet informations inside the server.
+  
+\end{frame}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Kessel}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Kamino}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
