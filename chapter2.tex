@@ -8,6 +8,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Strings and code obfuscation}
+	
+	Attackers need a way to obfuscate strings and code of backdoor (such as filenames or directories).
+	
+	\medskip
+	
+	\textbf{XOR cipher}: simplest method, encrypt the strings by xor the string with a key.
+	
+	\medskip
+	
+	\textbf{String stacking}: construct strings directly in the stack in order to bypass simple string searched.
+	
+	\centering
+  \includegraphics[width=0.4\textwidth]{images/string_stacking}
+  \captionof{figure}{String stacking in a binary}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -15,7 +30,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Credential stealing}
-	
+
+  Various methods to steal users credential on both sides. 
+
+  \bigskip
+
+	\textbf{Client}
+
+  \smallskip
+
+  Modify functions on client to log password on log-in such:
+
+  \smallskip
+
+  \textsc{userauth\_passwd}, Authenticates a session with username and password.
+
+  \smallskip
+
+  \textsc{ssh\_askpass}, Pass-phrase dialog.
+
+  \bigskip
+
+	\textbf{Server}
+
+  \smallskip
+
+  Modify functions on server to log password on request such:
+  
+  \smallskip
+
+  \textsc{auth\_password}, Tries to authenticate the user using password.
+
+  \smallskip
+
+  \textsc{sshpam\_respond}, Tries to authenticate the user with PAM (Pluggable authentication modules).
+
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -78,15 +128,25 @@
 	\medskip
 
 	with the following features:
-	
-	\begin{itemize}
-	  \item \textbf{Hardcoded password}, 
-	  \item \textbf{Configuration and log}, TODO
-	  \item \textbf{Environment variables}, TODO
-	  \item \textbf{Hooked functions}, TODO
-	\end{itemize}
+
+	\smallskip
+
+  \textbf{Hardcoded password}, compare client password with a hardcoded password.
+
+  \smallskip
+
+  \textbf{Configuration and log}, change daemon configuration to permit full access and disable logging features in order to not leave traces on the system.
+
+  \smallskip
+
+  \textbf{Environment variables}, change environment variables such as \textsc{HISTFILE}.
+
+  \smallskip
+
+  \textbf{Hooked functions}, modify all functions for loggin and debugging.
+
   \end{column}
-  \begin{column}{0.5\textwidth}  %%<--- here
+  \begin{column}{0.5\textwidth}
       \begin{center}
       
        \includegraphics[width=0.5\textwidth]{images/hardcoded_password}
