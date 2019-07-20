@@ -10,8 +10,8 @@
 	\frametitle{OpenSSH backdoor galaxy}
 	
    \begin{center}    
-   \includegraphics[width=0.6\textwidth]{images/OpenSSH_backdoor_galaxy}
-   %\captionof{figure}{Backdoor password verification}
+   \includegraphics[width=0.55\textwidth]{images/OpenSSH_backdoor_galaxy}
+   \captionof{figure}{OpenSSH backdoor families according to ESET research}
    \end{center}
 
 \end{frame}
@@ -75,6 +75,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Kessel}
+	
+	\small
+	
+	Most advanced and recent between all the families. This backdoor includes two main features: a bot functionality and credentials stealing.
+	
+	\medskip
+	
+	\textbf{Bot feature}: a bot is launched at the beginning of the OpenSSH main function, generate an ID based on MAC address, collect system information then starts two threads.
+  
+	\smallskip
+
+  First thread periodically send encrypted informations to a C\&C server and eventually create a reverse shell with a specified machine. Second thread repeatedly queries a TXT records in a custom DNS server to get commands.    
+  
+	\medskip
+	
+	\textbf{Credential stealing}: reimplements two malicious functions in SSH daemon (\textsc{ssh\_login} and \textsc{user\_auth\_pubkey}) to steal remote host/username, password and local username (or private/public key). Exfiltrate stolen credentials using HTTP, TCP or DNS protocol.
+  
+   \begin{center}    
+   \includegraphics[width=0.45\textwidth]{images/dns_exfiltration}
+   \captionof{figure}{DNS exfiltration schema}
+   \end{center}
+
+  	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -82,5 +105,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 	\frametitle{Kamino}
+	
+	First variant of this backdoor already seen in 2013 (as documented in \textbf{[3]}).
+	
+	\medskip
+	
+	Used together with an Apache module called DarkLeech to redirect internet traffic.
+	
+	\medskip
+	
+	After few years the same backdoor was used again to attack Russian Banks by a group known as Carbanak, resulting in $\sim$900 million dollars 
+	
+	
+   \begin{center}    
+   \includegraphics[width=0.55\textwidth]{images/Carbanak}
+   \captionof{figure}{Carbanak attack (source: Kaspersky\textbf{[7]})}
+   \end{center}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
