@@ -26,10 +26,6 @@ A landscape of OpenSSH backdoors - Seminar for ICT Risk Assessment exam @ UniPi
    * Honeypot structure and strategy
    * Observed interaction: Mimban
    * Observed interaction: Borleias
-5. **Compromission**
-   * Linux server market share
-   * Operation Windigo summary
-   * Operation Windigo damage
 6. **Mitigation**
    * Preventing compromise of SSH servers
    * Correct OpenSSH configuration

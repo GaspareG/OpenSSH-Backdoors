@@ -1,18 +1,76 @@
-\part{Compromission}
-\section{Compromission}
+\part{Mitigation}
+\section{Mitigation}
 
 \begin{frame}
 	\partpage
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\frametitle{Linux server market share}
-\end{frame}
+	\frametitle{Preventing compromise of SSH servers}
+	
+	
+	Very difficult to determine the infection vector used to install these OpenSSH backdoors.
+	
+	\medskip
+	
+	In the operation Windigo two different vector was used: 
+	
+	\smallskip
+	
+	An attack of the website \textit{kernel.org} (the official repository of the linux kernel source code) to inject malicious code.
+	
+	\smallskip
+	
+	An attack to \textit{cpanel.net}, the most famous software to manage websites and hosting.
 
-\begin{frame}
-	\frametitle{Operation Windigo summary}
+  \medskip
+  
+  Obvious but important recommendation is to install software only from trusted sources, e.g. checks sources in \textsc{/etc/apt/sources.list} for debian-derived linux distribution or install only trusted package from the AUR (Arch User Repository) for ArchLinux distribution. 
+  	
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\frametitle{Operation Windigo damage}
+	\frametitle{Correct OpenSSH configuration}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Check logs}
+	
+	Enable logs for every critical service.
+
+	\smallskip
+
+  Periodically backup logs in an external server/device.
+
+	\smallskip
+	
+	Check for log files in server.
+
+	\smallskip
+	
+  \begin{center}    
+  \includegraphics[width=1\textwidth]{images/ssh_log}
+  \captionof{figure}{Failed attempt of login in a server}
+  \end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Analyze network traffic}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Detect compromised SSH tools}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
