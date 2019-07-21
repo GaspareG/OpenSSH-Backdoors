@@ -9,7 +9,7 @@
 \begin{frame}
 	\frametitle{Definition and goals}
 	
-	A honeypot is a ICT resource used for monitoring, detecting and analyzing attacks. It has no production value, no real sensible data. 
+	A honeypot is a \textbf{ICT resource} used for monitoring, detecting and analyzing attacks. It has no production value, no real sensible data. 
 	
 	\smallskip
 
@@ -45,11 +45,11 @@
   
   \smallskip
 
-  For a client backdoor is enough to log into the honeypot server. 
+  For a client backdoor is enough to \textbf{log into the honeypot server}. 
   
   \smallskip
 
-  More complicate is for a daemon backdoor, one solution is to install the daemon backdoor on the honeypot server, 
+  More complicate is for a daemon backdoor, one solution is to \textbf{install the daemon backdoor} on the honeypot server, 
   log in with a safe client and remove the backdoor, in order to simulate the backdoor detection in the attacker eyes.
 
   \smallskip
@@ -82,7 +82,7 @@
   
 	\smallskip
 	
-  Attackers logged in manually from a Russian IP address, try to clean command history, check some files and finally check the version of OpenSSH binary.  
+  Attackers logged in manually from a \textbf{Russian IP address}, try to clean command history, check some files and finally \textbf{check the version of OpenSSH binary}.  
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,17 +92,17 @@
 \begin{frame}
 	\frametitle{Observed interaction: Borleias}
 	
-	More interesting the results of the Borleias backdoor: the attackers first logged into the honeypot in less than 24 hours and repeat for more than 10 times withing four days.
+	More interesting the results of the Borleias backdoor: the attackers first logged into the honeypot in less than 24 hours and repeat for \textbf{more than 10 times} withing four days.
 	
 	\smallskip
 	
 	\begin{itemize}
-	  \item The attackers used Tor to login, in order to not leave trace.
+	  \item The attackers used \textbf{Tor} to login, in order to not leave trace.
 	  \item A classic version of the OpenSSH client was used to connect.
-	  \item They managed to get the credential leaked in the Mimban operations: this means that there is a connection between the two backdoors (maybe same operators or the credentials were sold somewhere).
-	  \item Some basic checks at beginning then more interesting operations in the few days later, in particular they drop a new version of the backdoor.
+	  \item They managed to get the credential leaked in the Mimban operations: this means that there is a \textbf{connection between the two backdoors} (maybe same operators or the credentials were sold somewhere).
+	  \item Some basic checks at beginning then more interesting operations in the few days later, in particular they drop a \textbf{new version of the backdoor}.
 	  \item Gather all the information about the server, exfiltrate them and clean all the command history.
-	  \item Meticulous attention to details (check of running process, timestamps of files, logged-in users between the execution of each command, ...)
+	  \item \textbf{Meticulous attention to details} (check of running process, timestamps of files, logged-in users between the execution of each command, ...)
 	\end{itemize} 
 	
 \end{frame}

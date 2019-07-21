@@ -7,11 +7,35 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\frametitle{OpenSSH backdoor galaxy}
+	\frametitle{OpenSSH backdoors galaxy}
 	
    \begin{center}    
    \includegraphics[width=0.55\textwidth]{images/OpenSSH_backdoor_galaxy}
    \captionof{figure}{OpenSSH backdoor families according to ESET research}
+   \end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{OpenSSH backdoors summary (1/2)}
+	
+   \begin{center}    
+   \includegraphics[width=0.85\textwidth]{images/families1}
+   \end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{OpenSSH backdoors summary (2/2)}
+	
+   \begin{center}    
+   \includegraphics[width=0.85\textwidth]{images/families2}
    \end{center}
 
 \end{frame}
@@ -33,6 +57,15 @@
 	Distinctive feature: \textbf{can receive commands through the SSH password}.\\
 	Two password are hardcoded in the backdoor: one to login in the server and another to execute commands, by appending data to the password.
 	
+	\medskip
+	
+	In particular:
+	
+	\smallskip
+	
+	\textbf{C0011455OpenSSHd} backdoor password for command line.
+	\textbf{C001145SOpenSSHd\$\{CMD\}} execute CMD on server.
+
 	\bigskip
 
   Powerful backdoor mode as attacker can execute command without a shell.
@@ -53,7 +86,7 @@
 	
 	\bigskip
 	
-  Second function connect to the C\&C server and send several informations about the host over UDP (such as current username, OS version, external IP address, CPU and RAM models, speed of the miner).
+  Second function connect to the C\&C server and send several information about the host over UDP (such as current username, OS version, external IP address, CPU and RAM models, speed of the miner).
   
 	\bigskip
 	
@@ -65,7 +98,7 @@
 
 	\bigskip
 	
-  Problem: need to store wallet informations inside the server.
+  Problem: need to store wallet information inside the server.
   
 \end{frame}
 	
@@ -86,7 +119,7 @@
   
 	\smallskip
 
-  First thread periodically send encrypted informations to a C\&C server and eventually create a reverse shell with a specified machine. Second thread repeatedly queries a TXT records in a custom DNS server to get commands.    
+  First thread periodically send encrypted information to a C\&C server and eventually create a reverse shell with a specified machine. Second thread repeatedly queries a TXT records in a custom DNS server to get commands.    
   
 	\medskip
 	
@@ -114,7 +147,7 @@
 	
 	\medskip
 	
-	After few years the same backdoor was used again to attack Russian Banks by a group known as Carbanak, resulting in $\sim$900 million dollars 
+	After few years the same backdoor was used again to attack Russian Banks by a group known as Carbanak, resulting in \textbf{$\sim$900 million dollars}. 
 	
 	
    \begin{center}    
